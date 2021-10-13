@@ -1,0 +1,23 @@
+.header {
+    background-color: #2F3552;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.header--logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 150px;
+}
+
+.header--logo p {
+    padding: 0 10px;
+}

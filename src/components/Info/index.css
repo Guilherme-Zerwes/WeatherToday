@@ -1,0 +1,121 @@
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.infoContainer--imageContainer {
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+}
+
+.infoContainer--imageContainer img{
+    width: 100%;
+    height: 100%;
+}
+
+.gradient {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 100vw;
+}
+
+.gradient:before {
+    content: '';
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(47,53,82,0),rgba(47,53,82,1));
+    z-index: 1;
+}
+
+.infoContainer--dataContainer {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.55);
+    border-radius: 5px;
+    color: #fff;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    position: absolute;
+    width: 400px;
+    max-height: 450px;
+    z-index: 2;
+    top: 20%;
+}
+
+.infoContainer--dataContainer img{
+    height: 125px;
+}
+
+.infoContainer--dataContainer h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.infoContainer--minMax {
+    display: flex;
+}
+
+.infoContainer--minMax p {
+    padding: 0 30px;
+}
+
+.angleRight, .angleLeft {
+    font-size: 70px;
+    position: absolute;
+    z-index: 3;
+    color: rgba(255,255,255,0.5);
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    top: 50%;
+    transition: all ease 0.5s;
+}
+
+.angleRight:hover, .angleLeft:hover {
+    color: rgba(255,255,255,1);
+    background-color: rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+
+.angleRight {
+    left: 90vw;
+}
+
+.angleLeft {
+    left: 0vw;
+    margin-left: 40px;
+}
+
+@media (max-width:760px) {
+    .infoContainer--dataContainer h3 {
+        font-size: 16px;
+    }
+
+    .infoContainer--dataContainer p {
+        font-size: 12px;
+    }
+
+    .infoContainer--dataContainer {
+        width: 200px;
+        height: 40vh;
+        top: 12vh;
+    }
+
+    .infoContainer--dataContainer img {
+        height: 50px;
+    }
+
+    .angleRight, .angleLeft {
+        font-size: 30px;
+    }
+}
